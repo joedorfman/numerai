@@ -1,0 +1,11 @@
+# numerai
+For my capstone project, I wanted to participate in Numerai's weekly data science competition. Numerai provides participants with cleaned, regularized, and obfuscated data to make predictions on that they then combine to steer their hedgefund investments. Because the is obfuscated, prior knowledge or research is not applicable.
+
+Submissions measured on three metrics: logarithmic loss, consistency (across eras), and concordance (consistency across datasets):
+
+Compared to accuracy, lograithmic loss accounts uncertainty in predictions and penalizes based on how far off your predicted probability is from the correct class. Logarithmic loss ranges from 0 to 1, with 0 being the best possible score. The baseline for the Numerai competition is <0.693.
+Consistency is a measure developed by Numerai to assess how well your model performs across eras. They are looking for models that perform consistently well across all eras in the test set. Numerai will reject your submission if this comes back below 58%.
+Finally, concordance is an assessment that the same model has made predictions for each data set. You are provided the targets for the validation set, but this is what is displayed in the public leaderboard as well, so someone could just copy these and appear to publicly have the best model. Numerai keeps the predictions on the test set to internally assess the performance of the model and determine how to weight it for their investments. The live dataset is used for making investments and determining the eventual payout (at which time it becomes public).
+I found this project to be incredibly challenging and I am happy that I was able to try new approaches and techniques that I previously hadn't had experience with before, including dealing with large datasets, create feature engineering, principal component analysis, and model ensembling with multiple underlying models.
+
+In the workbook, I've detailed my approach including EDA, feature engineering, selection, and extraction, modeling (including base learners and ensembling), results, and predictions. For reference, this analysis is for the Bernie #115 competition. Please let me know if you have any questions. You can reach me at joedorfman@gmail.com. I would love to hear from you!# numerai
